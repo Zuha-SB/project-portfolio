@@ -23,6 +23,13 @@ export default function Projects() {
       description: 'Web-based tic-tac-toe game featuring multiple AI opponents including Minimax, Alpha-Beta Pruning, Utility-based, and Random players. Demonstrates game theory algorithms and interactive web development.',
       tech: ['Next.js', 'TypeScript', 'React', 'Algorithms'],
       category: 'Full-Stack'
+    },
+    {
+      title: 'Surah Quiz',
+      description: 'Interactive quiz game where users select a surah and are challenged to fill in the blank for missing words in each ayah. Tests knowledge of the Quran through an engaging, educational format.',
+      tech: ['React Native', 'Expo', 'JavaScript'],
+      category: 'Web Development',
+      link: 'https://zuha-sb.github.io/surah-quiz/'
     }
   ]
 
@@ -34,7 +41,8 @@ export default function Projects() {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow"
+              className={`border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow ${project.link ? 'cursor-pointer' : ''}`}
+              onClick={project.link ? () => window.open(project.link, '_blank') : undefined}
             >
               <div className="flex items-center justify-between mb-4">
                 <h3 className="text-xl font-semibold text-gray-900">{project.title}</h3>
@@ -51,6 +59,13 @@ export default function Projects() {
                   </span>
                 ))}
               </div>
+              {project.link && (
+                <div className="mt-4">
+                  <span className="text-sm text-blue-600 hover:text-blue-800 font-medium">
+                    View Project →
+                  </span>
+                </div>
+              )}
             </div>
           ))}
         </div>
