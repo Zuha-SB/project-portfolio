@@ -20,9 +20,10 @@ export default function Projects() {
     },
     {
       title: 'Interactive Tic-Tac-Toe with AI',
-      description: 'Web-based tic-tac-toe game featuring multiple AI opponents including Minimax, Alpha-Beta Pruning, Utility-based, and Random players. Demonstrates game theory algorithms and interactive web development.',
-      tech: ['Next.js', 'TypeScript', 'React', 'Algorithms'],
-      category: 'Full-Stack'
+      description: 'Web-based tic-tac-toe game featuring 5 AI opponents implementing different strategies: Random, Goal-Based, Utility-Based evaluation, Minimax, and Alpha-Beta Pruning. Explored game theory algorithms and optimal decision-making in adversarial games.',
+      tech: ['Python', 'Flask', 'HTML', 'Algorithms'],
+      category: 'Full-Stack',
+      link: 'https://tic-tac-toe-app-ym72.onrender.com'
     },
     {
       title: 'Surah Quiz',
