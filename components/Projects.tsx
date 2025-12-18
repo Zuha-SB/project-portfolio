@@ -25,7 +25,7 @@ export default function Projects() {
       description: 'Web-based tic-tac-toe game featuring 5 AI opponents implementing different strategies: Random, Goal-Based, Utility-Based evaluation, Minimax, and Alpha-Beta Pruning. Explored game theory algorithms and optimal decision-making in adversarial games.',
       tech: ['Python', 'Flask', 'HTML', 'Algorithms'],
       category: 'Full-Stack',
-      link: 'https://tic-tac-toe-app-ym72.onrender.com'
+      link: 'https://tic-tac-toe.zuha.dev'
     },
     {
       title: 'Surah Quiz',
