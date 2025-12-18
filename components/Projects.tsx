@@ -30,6 +30,19 @@ export default function Projects() {
       tech: ['React Native', 'Expo', 'JavaScript'],
       category: 'Web Development',
       link: 'https://zuha-sb.github.io/surah-quiz/'
+    },
+    {
+      title: 'ML Wiki RAG Pipeline',
+      description: 'End-to-end Retrieval-Augmented Generation system with multiple chunking strategies (fixed, sentence, semantic, recursive), hybrid dense + sparse retrieval with cross-encoder re-ranking, and comprehensive IR evaluation metrics.',
+      tech: ['Python', 'FAISS', 'Sentence Transformers', 'Flask'],
+      category: 'AI/ML',
+      link: 'https://github.com/Zuha-SB/ml-wiki-rag'
+    },
+    {
+      title: 'ChessGPT',
+      description: 'GPT-style transformer trained to predict chess moves by learning from a grandmaster\'s games. Built a custom tokenizer for chess notation, implemented logit masking for legal move generation, and explored how language models can capture individual playing styles.',
+      tech: ['Python', 'PyTorch', 'Transformers', 'NLP'],
+      category: 'AI/ML'
     }
   ]
 
