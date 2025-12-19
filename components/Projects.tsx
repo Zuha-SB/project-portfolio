@@ -3,38 +3,6 @@
 export default function Projects() {
   const projects = [
     {
-      title: 'Basic LLM from Scratch',
-      description: 'Built a large language model from the ground up, implementing transformer architecture, attention mechanisms, and training pipeline. Demonstrates deep understanding of neural network fundamentals and NLP.',
-      tech: ['Python', 'PyTorch', 'Transformers', 'NLP'],
-      category: 'AI/ML'
-    },
-    {
-      title: 'MNIST & Iris Dataset Analysis',
-      description: 'Comprehensive data analysis and machine learning exploration of classic datasets. Implemented various classification algorithms, feature engineering, and visualization techniques to extract insights.',
-      tech: ['Python', 'scikit-learn', 'pandas', 'matplotlib'],
-      category: 'Data Science'
-    },
-    {
-      title: 'ML for Space Debris Orbital Paths',
-      description: 'Machine learning model to predict and analyze orbital trajectories of space debris. Applied predictive modeling techniques to address space sustainability challenges.',
-      tech: ['Python', 'Machine Learning', 'Data Analysis'],
-      category: 'AI/ML'
-    },
-    {
-      title: 'Interactive Tic-Tac-Toe with AI',
-      description: 'Web-based tic-tac-toe game featuring 5 AI opponents implementing different strategies: Random, Goal-Based, Utility-Based evaluation, Minimax, and Alpha-Beta Pruning. Explored game theory algorithms and optimal decision-making in adversarial games.',
-      tech: ['Python', 'Flask', 'HTML', 'Algorithms'],
-      category: 'Full-Stack',
-      link: 'https://tic-tac-toe.zuha.dev'
-    },
-    {
-      title: 'Surah Quiz',
-      description: 'Interactive quiz game where users select a surah and are challenged to fill in the blank for missing words in each ayah. Tests knowledge of the Quran through an engaging, educational format.',
-      tech: ['React Native', 'Expo', 'JavaScript'],
-      category: 'Web Development',
-      link: 'https://zuha-sb.github.io/surah-quiz/'
-    },
-    {
       title: 'ML Wiki RAG Pipeline',
       description: 'End-to-end Retrieval-Augmented Generation system with multiple chunking strategies (fixed, sentence, semantic, recursive), hybrid dense + sparse retrieval with cross-encoder re-ranking, and comprehensive IR evaluation metrics.',
       tech: ['Python', 'FAISS', 'Sentence Transformers', 'Flask'],
@@ -46,6 +14,39 @@ export default function Projects() {
       description: 'GPT-style transformer trained to predict chess moves by learning from a grandmaster\'s games. Built a custom tokenizer for chess notation, implemented logit masking for legal move generation, and explored how language models can capture individual playing styles.',
       tech: ['Python', 'PyTorch', 'Transformers', 'NLP'],
       category: 'AI/ML'
+    },
+    {
+      title: 'Surah Quiz',
+      description: 'Interactive quiz game where users select a surah and are challenged to fill in the blank for missing words in each ayah. Tests knowledge of the Quran through an engaging, educational format.',
+      tech: ['React Native', 'Expo', 'JavaScript'],
+      category: 'Web Development',
+      link: 'https://zuha-sb.github.io/surah-quiz/'
+    },
+    {
+      title: 'Interactive Tic-Tac-Toe with AI',
+      description: 'Web-based tic-tac-toe game featuring 5 AI opponents implementing different strategies: Random, Goal-Based, Utility-Based evaluation, Minimax, and Alpha-Beta Pruning. Explored game theory algorithms and optimal decision-making in adversarial games.',
+      tech: ['Python', 'Flask', 'HTML', 'Algorithms'],
+      category: 'Full-Stack',
+      link: 'https://tic-tac-toe.zuha.dev'
+    },
+    {
+      title: 'Basic LLM from Scratch',
+      description: 'Built a large language model from the ground up, implementing transformer architecture, attention mechanisms, and training pipeline. Demonstrates deep understanding of neural network fundamentals and NLP.',
+      tech: ['Python', 'PyTorch', 'Transformers', 'NLP'],
+      category: 'AI/ML'
+    },
+    {
+      title: 'ML for Space Debris Orbital Paths',
+      description: 'Machine learning model to predict and analyze orbital trajectories of space debris. Applied predictive modeling techniques to address space sustainability challenges.',
+      tech: ['Python', 'Machine Learning', 'Data Analysis'],
+      category: 'AI/ML',
+      link: 'https://devpost.com/software/space-debris-ai-machine-learning-for-debris-analysis'
+    },
+    {
+      title: 'MNIST & Iris Dataset Analysis',
+      description: 'Comprehensive data analysis and machine learning exploration of classic datasets. Implemented various classification algorithms, feature engineering, and visualization techniques to extract insights.',
+      tech: ['Python', 'scikit-learn', 'pandas', 'matplotlib'],
+      category: 'Data Science'
     }
   ]
 

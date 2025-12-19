@@ -7,7 +7,7 @@ export default function Skills() {
     },
     {
       title: 'Backend',
-      skills: ['Node.js', 'Python', 'REST APIs', 'GraphQL', 'Databases', 'Microservices'],
+      skills: ['Node.js', 'Python', 'Flask', 'REST APIs', 'Databases', 'Microservices'],
       color: 'from-green-500 to-emerald-500'
     },
     {
