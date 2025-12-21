@@ -30,6 +30,13 @@ export default function Projects() {
       link: 'https://tic-tac-toe.zuha.dev'
     },
     {
+      title: 'Make Happy - Mental Wellness',
+      description: 'A user-centered web application designed to promote mental wellness by generating whimsical, humorous, and playful personalized sentences about users. Built with modern React patterns and Next.js, features dynamic content generation and responsive design principles.',
+      tech: ['Next.js', 'TypeScript', 'React', 'Tailwind CSS'],
+      category: 'Web Development',
+      link: 'https://make-happy.zuha.dev'
+    },
+    {
       title: 'Basic LLM from Scratch',
       description: 'Built a large language model from the ground up, implementing transformer architecture, attention mechanisms, and training pipeline. Demonstrates deep understanding of neural network fundamentals and NLP.',
       tech: ['Python', 'PyTorch', 'Transformers', 'NLP'],
