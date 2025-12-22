@@ -17,8 +17,6 @@ module.exports = {
         'scale-in': 'scaleIn 0.5s ease-out',
         'typing': 'typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite',
         'shimmer': 'shimmer 2s linear infinite',
-        'sunrise-pulse': 'sunrisePulse 8s ease-in-out infinite',
-        'rise-brightness': 'riseBrightness 8s ease-in-out infinite',
       },
       keyframes: {
         gradient: {
@@ -66,22 +64,6 @@ module.exports = {
         shimmer: {
           '0%': { backgroundPosition: '-1000px 0' },
           '100%': { backgroundPosition: '1000px 0' }
-        },
-        sunrisePulse: {
-          '0%, 100%': { 
-            transform: 'translateX(-50%) scaleY(1)'
-          },
-          '50%': { 
-            transform: 'translateX(-50%) scaleY(1.2)'
-          }
-        },
-        riseBrightness: {
-          '0%, 100%': { 
-            opacity: '0'
-          },
-          '50%': { 
-            opacity: '0.6'
-          }
         }
       },
       backgroundImage: {

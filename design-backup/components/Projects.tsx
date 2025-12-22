@@ -94,25 +94,22 @@ export default function Projects() {
   const getCategoryColor = (category: string) => {
     switch (category) {
       case 'AI/ML':
-        return 'text-orange-600/50 border-orange-600/15'
+        return 'from-purple-500 to-pink-500'
       case 'Web Development':
-        return 'text-orange-600/50 border-orange-600/15'
+        return 'from-blue-500 to-cyan-500'
       case 'Full-Stack':
-        return 'text-amber-600/50 border-amber-600/15'
+        return 'from-green-500 to-emerald-500'
       case 'Data Science':
-        return 'text-orange-600/55 border-orange-600/15'
+        return 'from-orange-500 to-red-500'
       default:
-        return 'text-gray-400 border-gray-500/30'
+        return 'from-gray-500 to-gray-600'
     }
   }
 
   return (
-    <section ref={sectionRef} id="projects" className="relative bg-gray-800 overflow-hidden">
-      {/* Smooth fade transition at top to blend from skills section */}
-      <div className="absolute top-0 left-0 right-0 h-16 bg-gradient-to-b from-gray-800 to-transparent pointer-events-none z-0"></div>
-      
-      {/* Smooth fade transition at bottom to blend into contact section */}
-      <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-gray-900 to-transparent pointer-events-none z-0"></div>
+    <section ref={sectionRef} id="projects" className="relative bg-gradient-to-b from-slate-900 to-slate-800 overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(139,92,246,0.1),transparent_50%)]"></div>
       
       <div className="container mx-auto px-4 relative z-10">
         <h2 className="section-title">Featured Projects</h2>
@@ -120,25 +117,36 @@ export default function Projects() {
           {projects.map((project, index) => (
             <div
               key={index}
-              className={`group bg-gray-700/50 rounded-lg p-6 border border-white/5 transition-all duration-300 hover:border-white/20 hover:bg-gray-700/70 ${
+              className={`group glass rounded-2xl p-6 card-hover glow-effect transition-all duration-700 cursor-pointer ${
                 isVisible 
                   ? 'opacity-100 translate-y-0' 
-                  : 'opacity-0 translate-y-5'
-              } ${project.link ? 'cursor-pointer' : 'cursor-default'}`}
-              style={{ transitionDelay: `${index * 50}ms` }}
+                  : 'opacity-0 translate-y-10'
+              } ${project.link ? '' : 'cursor-default'}`}
+              style={{ transitionDelay: `${index * 100}ms` }}
               onClick={project.link ? () => window.open(project.link, '_blank') : undefined}
+              onMouseEnter={(e) => {
+                if (project.link) {
+                  e.currentTarget.style.transform = 'translateY(-10px) rotateX(5deg)'
+                }
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'translateY(0) rotateX(0)'
+              }}
             >
-              <div className="flex items-start justify-between mb-3">
-                <h3 className="text-lg font-semibold text-white flex-1">
+              {/* Gradient accent bar */}
+              <div className={`h-1 w-full bg-gradient-to-r ${project.gradient} rounded-full mb-4`}></div>
+              
+              <div className="flex items-start justify-between mb-4">
+                <h3 className="text-xl font-bold text-white group-hover:gradient-text transition-all duration-300 flex-1">
                   {project.title}
                 </h3>
               </div>
               
-              <span className={`inline-block px-2.5 py-1 text-xs font-medium ${getCategoryColor(project.category)} border rounded-full mb-4`}>
+              <span className={`inline-block px-3 py-1 text-xs font-semibold bg-gradient-to-r ${getCategoryColor(project.category)} bg-clip-text text-transparent border border-white/20 rounded-full mb-4`}>
                 {project.category}
               </span>
               
-              <p className="text-gray-400 mb-4 text-sm leading-relaxed line-clamp-4">
+              <p className="text-gray-400 mb-6 text-sm leading-relaxed line-clamp-4">
                 {project.description}
               </p>
               
@@ -146,7 +154,7 @@ export default function Projects() {
                 {project.tech.map((tech, techIndex) => (
                   <span
                     key={techIndex}
-                    className="px-2.5 py-1 bg-gray-600/50 text-gray-300 text-xs rounded border border-white/5"
+                    className="px-3 py-1 glass text-gray-300 text-xs rounded-full border border-white/10 hover:border-white/30 transition-all duration-300 hover:scale-110"
                   >
                     {tech}
                   </span>
@@ -154,9 +162,9 @@ export default function Projects() {
               </div>
               
               {project.link && (
-                <div className="flex items-center gap-2 text-orange-600/50 text-sm font-medium">
-                  <span>View Project</span>
-                  <span>→</span>
+                <div className="flex items-center gap-2 text-blue-400 group-hover:text-blue-300 transition-colors duration-300">
+                  <span className="text-sm font-medium">View Project</span>
+                  <span className="text-lg group-hover:translate-x-1 transition-transform duration-300">→</span>
                 </div>
               )}
             </div>

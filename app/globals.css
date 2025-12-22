@@ -12,11 +12,14 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #111827;
+  color: #e5e5e5;
+  overflow-x: hidden;
 }
 
 @layer components {
   .section-title {
-    @apply text-4xl md:text-5xl font-bold mb-12 text-center text-gray-900;
+    @apply text-4xl md:text-5xl font-bold mb-12 text-center text-white;
   }
 }
 
@@ -24,5 +27,23 @@ body {
   section {
     @apply py-20 md:py-24;
   }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #111827;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4b5563;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6b7280;
 }
 
