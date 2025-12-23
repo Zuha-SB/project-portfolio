@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react'
 
 export default function Projects() {
   const [isVisible, setIsVisible] = useState(false)
+  const [expandedProjects, setExpandedProjects] = useState<Set<number>>(new Set())
   const sectionRef = useRef<HTMLElement>(null)
 
   useEffect(() => {
@@ -106,6 +107,21 @@ export default function Projects() {
     }
   }
 
+  const toggleExpand = (index: number, e: React.MouseEvent) => {
+    e.stopPropagation() // Prevent card click when clicking read more
+    setExpandedProjects(prev => {
+      const newSet = new Set(prev)
+      if (newSet.has(index)) {
+        newSet.delete(index)
+      } else {
+        newSet.add(index)
+      }
+      return newSet
+    })
+  }
+
+  const isExpanded = (index: number) => expandedProjects.has(index)
+
   return (
     <section ref={sectionRef} id="projects" className="relative bg-gray-800 overflow-hidden">
       {/* Smooth fade transition at top to blend from skills section */}
@@ -138,9 +154,16 @@ export default function Projects() {
                 {project.category}
               </span>
               
-              <p className="text-gray-400 mb-4 text-sm leading-relaxed line-clamp-4">
+              <p className={`text-gray-400 mb-4 text-sm leading-relaxed ${!isExpanded(index) ? 'line-clamp-4' : ''}`}>
                 {project.description}
               </p>
+              
+              <button
+                onClick={(e) => toggleExpand(index, e)}
+                className="text-orange-600/70 hover:text-orange-600 text-xs font-medium mb-4 transition-colors duration-200"
+              >
+                {isExpanded(index) ? 'Read less' : 'Read more'}
+              </button>
               
               <div className="flex flex-wrap gap-2 mb-4">
                 {project.tech.map((tech, techIndex) => (

@@ -40,7 +40,7 @@ export default function Skills() {
     },
     {
       title: 'AI/ML',
-      skills: ['Machine Learning', 'Deep Learning', 'TensorFlow', 'PyTorch', 'NLP', 'Computer Vision'],
+      skills: ['Machine Learning', 'Deep Learning', 'TensorFlow', 'PyTorch', 'NLP'],
       accent: 'orange-dark'
     }
   ]
