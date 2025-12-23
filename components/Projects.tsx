@@ -45,12 +45,20 @@ export default function Projects() {
       gradient: 'from-blue-500 to-cyan-500'
     },
     {
+      title: 'Middle-Earth Messenger',
+      description: 'A Streamlit chat application that lets you converse with characters from The Lord of the Rings. Each character speaks in their authentic voice, drawing from their movie quotes and wiki lore. Features character selection, conversation memory, and rich lore integration using Vertex AI.',
+      tech: ['Python', 'Streamlit', 'Vertex AI', 'NLP'],
+      category: 'AI/ML',
+      gradient: 'from-amber-500 to-yellow-500',
+      link: 'https://tolkien.zuha.dev'
+    },
+    {
       title: 'Surah Quiz',
       description: 'Interactive quiz game where users select a surah and are challenged to fill in the blank for missing words in each ayah. Tests knowledge of the Quran through an engaging, educational format.',
       tech: ['React Native', 'Expo', 'JavaScript'],
       category: 'Web Development',
       gradient: 'from-green-500 to-emerald-500',
-      link: 'https://zuha-sb.github.io/surah-quiz/'
+      link: 'https://surah-quiz.zuha.dev'
     },
     {
       title: 'Interactive Tic-Tac-Toe with AI',
