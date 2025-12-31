@@ -85,7 +85,7 @@ export default function Projects() {
     },
     {
       title: 'Middle-Earth Messenger',
-      description: 'A Streamlit chat application that lets you converse with characters from The Lord of the Rings. Each character speaks in their authentic voice, drawing from their movie quotes and wiki lore. Features character selection, conversation memory, and rich lore integration using Vertex AI.',
+      description: 'A Streamlit chat application that lets you converse with characters from The Lord of the Rings. Each character speaks in their authentic voice, drawing from their quotes and wiki lore. Features character selection, conversation memory, and rich lore integration.',
       tech: ['Python', 'Streamlit', 'Vertex AI', 'NLP'],
       category: 'AI/ML',
       gradient: 'from-amber-500 to-yellow-500',
