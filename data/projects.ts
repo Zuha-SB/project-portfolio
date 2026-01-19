@@ -48,6 +48,14 @@ export const allProjects: Project[] = [
     link: 'https://make-happy.zuha.dev'
   },
   {
+    title: 'Islamic Flashcard Generator',
+    description: 'This tool converts Islamic book PDFs into Quizlet-compatible flashcards. Features automatic chapter/section detection, AI-powered learning point extraction, Arabic text preservation, and bilingual support (Arabic/English).',
+    tech: ['AI/ML', 'PDF Processing', 'Web Development'],
+    category: 'AI/ML',
+    gradient: 'from-emerald-500 to-teal-500',
+    link: 'https://islamic-flashcards.zuha.dev'
+  },
+  {
     title: 'Basic LLM from Scratch',
     description: 'Built a large language model from the ground up, implementing transformer architecture, attention mechanisms, and training pipeline. Demonstrates deep understanding of neural network fundamentals and NLP.',
     tech: ['Python', 'PyTorch', 'Transformers', 'NLP'],
